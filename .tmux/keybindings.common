@@ -1,0 +1,29 @@
+# Unbind default key.
+unbind-key q 
+unbind-key n
+
+unbind-key C-b
+unbind-key C-p
+
+# remap prefix from 'C-b' to 'C-a'
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# use vim-like keys for splits and windows
+bind-key v split-window -h
+bind-key s split-window -v
+
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+bind-key p display-panes
+
+
+bind-key l select-pane -R
+bind-key q confirm-before -p "kill-pane #P? (y/n)" kill-pane
+
+
+bind-key ] next-window
+bind-key [ previous-window
